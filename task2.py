@@ -1,5 +1,13 @@
+n = int(input())
 res = list(map(int, input().split()))
-new = []
-for i in res:
-    new.append(res[i-2])
-print(new)
+
+
+if len(res) != n:
+    print("Введено неверное количество чисел!")
+    exit()
+ 
+
+new = [res[-1]]  
+new.extend(res[:-1])  
+print(*new)
+
